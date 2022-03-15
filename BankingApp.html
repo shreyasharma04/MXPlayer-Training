@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <script>
+       
+
+        var Banking_App = {
+            
+            initial_balance: 0,
+            open_account: function (amount) {
+                if (this.initial_balance == 0) {
+                    this.initial_balance = this.initial_balance + amount
+                    document.write("New account is created " , this.initial_balance)
+                }
+                else {
+                    this.initial_balance = this.initial_balance + amount
+                    document.write(" The account already exist and a,ount is added to it ")
+                }
+            },
+            Withdraw: function (amount) {
+                if (this.initial_balance > amount) {
+                    this.initial_balance = this.initial_balance - amount
+                    document.write("The remaining balance is ", this.initial_balance)
+                }
+                else {
+                    document.write("There is no sufficient balance in your account: ")
+                }
+            },
+            Deposit: function (amount) {
+                this.initial_balance = this.initial_balance + amount
+                document.write("The amount is added successfully and total balance is ", this.initial_balance)
+            }
+        };
+
+        Banking_App.open_account(10000);
+        document.write("<br />");
+        Banking_App.Withdraw(2000);
+        document.write("<br />");
+        Banking_App.Deposit(3000);
+
+    </script>
+</head>
+
+</html>
+

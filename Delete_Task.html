@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Deleting a task</title>
+    <script>
+        function Delete_task(){
+            this.array=["Task1","Task2","Task3","Task4","Task5"];
+            document.write(this.array);
+            document.write("<br>");
+            this.delete=function(number){
+                this.array.splice(2,1);
+                document.write("<br>");
+                document.write("To do list after deleting a Task : "+this.array);
+            }
+        }
+        var del = new Delete_task();
+        del.delete(2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
